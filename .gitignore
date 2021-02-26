@@ -1,3 +1,12 @@
+# c++ c#
+Debug
+
+# Mac stuff
+.DS_Store
+
+# IntelliJ
+.idea
+
 # Prerequisites
 *.d
 
