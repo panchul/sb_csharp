@@ -1,5 +1,8 @@
 # c++ c#
 Debug
+Release
+.vs
+obj
 
 # Mac stuff
 .DS_Store
