@@ -12,6 +12,7 @@
 #include "ChildFrm.h"
 #include "MFCApplication1Doc.h"
 #include "MFCApplication1View.h"
+#include "CDialogForCSharpUserControl.h"
 
 #include "CUserControl1.h"
 
@@ -30,6 +31,7 @@ BEGIN_MESSAGE_MAP(CMFCApplication1App, CWinAppEx)
 	// Standard print setup command
 	ON_COMMAND(ID_FILE_PRINT_SETUP, &CWinAppEx::OnFilePrintSetup)
 	ON_COMMAND(ID_DEBUG_DOTHESUM, &CMFCApplication1App::OnDebugDothesum)
+	ON_COMMAND(ID_DEBUG_DIALOGWITHC, &CMFCApplication1App::OnDebugDialogWithC)
 END_MESSAGE_MAP()
 
 
@@ -251,4 +253,12 @@ void CMFCApplication1App::OnDebugDothesum()
 	
 	
 	// TODO: Add your command handler code here
+}
+
+
+void CMFCApplication1App::OnDebugDialogWithC()
+{
+	CDialogForCSharpUserControl dlg;
+
+	dlg.DoModal();
 }
