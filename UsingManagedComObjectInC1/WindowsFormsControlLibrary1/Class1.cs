@@ -10,12 +10,12 @@ namespace WindowsFormsControlLibrary1
     //class Class1
     //{
     //}
-    [Guid("599AD473-B0A9-4A6E-B260-CF6FDEBF151B"), InterfaceType(ComInterfaceType.InterfaceIsDual)]
+    [Guid("d2867616-fe2c-42b4-8599-01d9937ea46e"), InterfaceType(ComInterfaceType.InterfaceIsDual)]
     public interface IClass1
     {
         void AddNumbers(byte[] array);
     }
-    [Guid("62FBC3A9-E2C0-4B53-9BF3-FDE22AA0CFF2"), ClassInterface(ClassInterfaceType.None)]
+    [Guid("64be7ce7-b3a0-40f5-bbe6-49914f868f05"), ClassInterface(ClassInterfaceType.None)]
     public class Class1 : IClass1
     {
 
@@ -28,9 +28,7 @@ namespace WindowsFormsControlLibrary1
             }
             
             System.Console.WriteLine("The sum of the numbers is {0}", number);
-
-            System.Windows.Forms.MessageBox.Show("GUi works");
-
+            System.Windows.Forms.MessageBox.Show(String.Format("The sum of the numbers is {0}", number));
         }
     }
 }

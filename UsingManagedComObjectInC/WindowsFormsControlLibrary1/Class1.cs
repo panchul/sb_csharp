@@ -28,9 +28,7 @@ namespace WindowsFormsControlLibrary1
             }
             
             System.Console.WriteLine("The sum of the numbers is {0}", number);
-
-            System.Windows.Forms.MessageBox.Show("GUi works");
-
+            System.Windows.Forms.MessageBox.Show(String.Format("The sum of the numbers is {0}", number));
         }
     }
 }
