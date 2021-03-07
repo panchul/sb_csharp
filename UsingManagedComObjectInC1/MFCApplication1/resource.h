@@ -84,7 +84,6 @@
 #define IDS_FIND_TAB                    302
 #define IDS_EXPLORER                    305
 #define IDS_EDIT_MENU                   306
-#define IDD_DIALOG1                     310
 #define IDD_DIALOG_CSHARP_USERCONTROL1  310
 #define IDC_CSHARP_USER_CONTROL_PLACEHOLDER1 1000
 #define ID_DEBUG_DOTHESUM               32771
