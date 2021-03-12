@@ -186,6 +186,7 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CDialogForCSharpListUserControl.h" />
     <ClInclude Include="CDialogForCSharpUserControl.h" />
     <ClInclude Include="ChildFrm.h" />
     <ClInclude Include="ClassView.h" />
@@ -204,6 +205,7 @@
     <ClInclude Include="ViewTree.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CDialogForCSharpListUserControl.cpp" />
     <ClCompile Include="CDialogForCSharpUserControl.cpp" />
     <ClCompile Include="ChildFrm.cpp" />
     <ClCompile Include="ClassView.cpp" />

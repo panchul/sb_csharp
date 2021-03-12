@@ -37,6 +37,7 @@ public:
 	DECLARE_MESSAGE_MAP()
 	afx_msg void OnDebugDothesum();
 	afx_msg void OnDebugDialogWithC();
+	afx_msg void OnDebugDialogWithCsharpList();
 };
 
 extern CMFCApplication1App theApp;

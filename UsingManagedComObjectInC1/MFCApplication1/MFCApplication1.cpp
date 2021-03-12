@@ -13,6 +13,7 @@
 #include "MFCApplication1Doc.h"
 #include "MFCApplication1View.h"
 #include "CDialogForCSharpUserControl.h"
+#include "CDialogForCSharpListUserControl.h"
 
 #include "CUserControl1.h"
 
@@ -32,6 +33,7 @@ BEGIN_MESSAGE_MAP(CMFCApplication1App, CWinAppEx)
 	ON_COMMAND(ID_FILE_PRINT_SETUP, &CWinAppEx::OnFilePrintSetup)
 	ON_COMMAND(ID_DEBUG_DOTHESUM, &CMFCApplication1App::OnDebugDothesum)
 	ON_COMMAND(ID_DEBUG_DIALOGWITHC, &CMFCApplication1App::OnDebugDialogWithC)
+	ON_COMMAND(ID_DEBUG_DIALOG_WITH_CSHARP_LIST, &CMFCApplication1App::OnDebugDialogWithCsharpList)
 END_MESSAGE_MAP()
 
 
@@ -247,18 +249,21 @@ void CMFCApplication1App::OnDebugDothesum()
 	IClass1Ptr obj(_uuidof(Class1));
 	obj->AddNumbers(sa);
 	
-
 	// clean up
 	SafeArrayDestroy(sa);
-	
-	
-	// TODO: Add your command handler code here
 }
 
 
 void CMFCApplication1App::OnDebugDialogWithC()
 {
 	CDialogForCSharpUserControl dlg;
+
+	dlg.DoModal();
+}
+
+void CMFCApplication1App::OnDebugDialogWithCsharpList()
+{
+	CDialogForCSharpListUserControl dlg;
 
 	dlg.DoModal();
 }

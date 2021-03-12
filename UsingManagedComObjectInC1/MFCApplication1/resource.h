@@ -85,17 +85,26 @@
 #define IDS_EXPLORER                    305
 #define IDS_EDIT_MENU                   306
 #define IDD_DIALOG_CSHARP_USERCONTROL1  310
+#define IDD_DIALOG_CSHARP_LIST          312
 #define IDC_CSHARP_USER_CONTROL_PLACEHOLDER1 1000
+#define IDC_BUTTON1                     1001
+#define IDC_BUTTON2                     1002
+#define IDC_EDIT1                       1003
+#define IDC_EDIT2                       1004
+#define IDC_PLACEHOLDER_FOR_CSHARP_LIST 1005
+#define IDC_BUTTON_POPULATE_FROM_CPP    1006
 #define ID_DEBUG_DOTHESUM               32771
 #define ID_DEBUG_DIALOGWITHC            32772
+#define ID_DEBUG_DIALOGWITHC32773       32773
+#define ID_DEBUG_DIALOG_WITH_CSHARP_LIST 32774
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        312
-#define _APS_NEXT_COMMAND_VALUE         32773
-#define _APS_NEXT_CONTROL_VALUE         1001
+#define _APS_NEXT_RESOURCE_VALUE        314
+#define _APS_NEXT_COMMAND_VALUE         32775
+#define _APS_NEXT_CONTROL_VALUE         1007
 #define _APS_NEXT_SYMED_VALUE           310
 #endif
 #endif
