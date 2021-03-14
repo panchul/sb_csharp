@@ -1,0 +1,19 @@
+import "inspectable.idl";
+import "windows.ui.core.idl";
+
+namespace Sample
+{
+    [version(1)]
+    [uuid(1dc8dbf5-f0f3-4e22-aadc-5344ea75fa15)]
+    interface IHen : IInspectable
+    {
+        HRESULT Cluck([in] Windows.UI.Core.ICoreWindow * window);
+    }
+    
+    [version(1)]
+    [activatable(1)]
+    runtimeclass Hen
+    {
+        [default] interface IHen;
+    }
+}

@@ -9,6 +9,7 @@ Misc snippets and templates for C#
 - [Demos](#demos)
  - [ComponentsCppCX](#componentscppcx)
  - [ComponentsCppStandard](#componentscppstandard)
+ - [ComponentsCppStandardIDL](#componentscppstandardidl)
  - [CoreAppCppCX_UniversalWindows](#coreappcppcx-universalwindows)
  - [CoreAppStandardCpp](#coreappstandardcpp)
  - [CoreAppUniversalWindows](#coreappuniversalwindows)
@@ -29,6 +30,10 @@ Some projects work with Mono on Linux or Mac, but it is not guaranteed.
 Some needed libraries or packages might be in different place on your system, for example,
 I am using vcpackages from here, it is for Visual Studio 2019:
 `C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\VC\vcpackages`
+
+`metadata_dir`:
+
+"C:\Program Files (x86)\Windows Kits\10\References\10.0.19041.0\Windows.Foundation.FoundationContract\4.0.0.0"
 
 You may also need to explicitly install some non-default packages in Visual Studio Installer.
 
@@ -54,6 +59,14 @@ mode to let it register DLLs, etc.
 ---
 
 [ComponentsCppStandard](ComponentsCppStandard/)
+
+---
+
+## ComponentsCppStandardIDL
+
+---
+
+[ComponentsCppStandardIDL](ComponentsCppStandardIDL/)
 
 ---
 
@@ -101,4 +114,6 @@ mode to let it register DLLs, etc.
 
 - uuidgen
 - ildasm
-- https://www.dependencywalker.com/  Dependency Walker
+- midl.exe
+- midlrt.exe
+- depends.exe https://www.dependencywalker.com/  Dependency Walker
