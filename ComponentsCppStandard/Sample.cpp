@@ -25,7 +25,7 @@ HRESULT __stdcall DllCanUnloadNow()
     return s_lock ? S_FALSE : S_OK;
 }
 
-struct __declspec(uuid("c4f36320-d1d7-4933-be4e-3842830ef48f")) __declspec(novtable)
+struct __declspec(uuid("fdc4cf7c-608a-4eed-a095-531042f0acc8")) __declspec(novtable)
 IHen : IInspectable
 {
     virtual HRESULT __stdcall Cluck() = 0;

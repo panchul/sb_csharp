@@ -99,5 +99,6 @@ mode to let it register DLLs, etc.
 
 # Links
 
+- uuidgen
 - ildasm
 - https://www.dependencywalker.com/  Dependency Walker

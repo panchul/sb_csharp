@@ -43,3 +43,5 @@ You can look inside of the dll using Dependency Walker tool, depends.exe:
 
 depends.exe did not work for me on Win 10, neither 32 or 64, just hangs.
 
+The App is also not working with the DLL I built. Complains about `Sample` namespace, could not add
+reference to the .dll, says it is not a COM object
