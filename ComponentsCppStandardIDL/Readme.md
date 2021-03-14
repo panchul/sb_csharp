@@ -39,6 +39,8 @@ But it does not create a .dll ??!!. I tried this, it did not help:
 
 Running it without /nomidl produces more files, no .dll though:
 
+	"C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x64\midl.exe" Sample.idl /winrt /metadata_dir "C:\Program Files (x86)\Windows Kits\10\References\10.0.19041.0\Windows.Foundation.FoundationContract\4.0.0.0"
+
     C:\src\workspace\projects\sb_csharp\ComponentsCppStandardIDL>ls -1
     App
     Exports.def
