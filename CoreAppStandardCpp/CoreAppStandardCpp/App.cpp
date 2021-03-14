@@ -89,6 +89,8 @@ public:
 	StringReference(StringReference const&) = delete;
 	StringReference& operator=(StringReference const&) = delete;
 
+	// could use new() and delete()
+
 	StringReference(wchar_t const* const value, unsigned const length)
 	{
 		Check(WindowsCreateStringReference(value,
