@@ -116,4 +116,6 @@ mode to let it register DLLs, etc.
 - ildasm
 - midl.exe
 - midlrt.exe
+- mdmerge.exe, to merge the definitions
 - depends.exe https://www.dependencywalker.com/  Dependency Walker
+
