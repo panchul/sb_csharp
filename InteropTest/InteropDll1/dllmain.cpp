@@ -95,3 +95,93 @@ PINVOKELIB_API void DeleteTestClass(CTestClass* instance)
         instance = nullptr;
     }
 }
+
+
+
+PINVOKELIB_API int TestStructInStruct(MYPERSON2* pPerson2)
+{
+    size_t len = 0;
+
+    StringCchLengthA(pPerson2->person->last, STRSAFE_MAX_CCH, &len);
+    len = sizeof(char) * (len + 2) + 1;
+
+    STRSAFE_LPSTR temp = (STRSAFE_LPSTR)CoTaskMemAlloc(len);
+    StringCchCopyA(temp, len, (STRSAFE_LPSTR)"Mc");
+    StringCbCatA(temp, len, (STRSAFE_LPSTR)pPerson2->person->last);
+
+    CoTaskMemFree(pPerson2->person->last);
+    pPerson2->person->last = (char*)temp;
+
+    return pPerson2->age;
+}
+
+PINVOKELIB_API void TestStructInStruct3(MYPERSON3 person3)
+{
+    printf("\n\nperson passed by value:\n");
+    printf("first = %s last = %s age = %i\n\n",
+        person3.person.first,
+        person3.person.last,
+        person3.age);
+}
+
+PINVOKELIB_API void TestArrayInStruct(MYARRAYSTRUCT* pStruct)
+{
+    pStruct->flag = true;
+    pStruct->vals[0] += 100;
+    pStruct->vals[1] += 100;
+    pStruct->vals[2] += 100;
+}
+
+PINVOKELIB_API int TestRefArrayOfInts(int** ppArray, int* pSize)
+{
+    int result = 0;
+
+    // CoTaskMemAlloc must be used instead of the new operator
+    // because code on the managed side will call Marshal.FreeCoTaskMem
+    // to free this memory.
+
+    int* newArray = (int*)CoTaskMemAlloc(sizeof(int) * 5);
+
+    for (int i = 0; i < *pSize; i++)
+    {
+        result += (*ppArray)[i];
+    }
+
+    for (int j = 0; j < 5; j++)
+    {
+        newArray[j] = (*ppArray)[j] + 100;
+    }
+
+    CoTaskMemFree(*ppArray);
+    *ppArray = newArray;
+    *pSize = 5;
+
+    return result;
+}
+
+PINVOKELIB_API void TestOutArrayOfStructs(int* pSize, MYSTRSTRUCT2** ppStruct)
+{
+    const int cArraySize = 5;
+    *pSize = 0;
+    *ppStruct = (MYSTRSTRUCT2*)CoTaskMemAlloc(cArraySize * sizeof(MYSTRSTRUCT2));
+
+    if (ppStruct != NULL)
+    {
+        MYSTRSTRUCT2* pCurStruct = *ppStruct;
+        LPSTR buffer;
+        *pSize = cArraySize;
+
+        STRSAFE_LPCSTR teststr = "***";
+        size_t len = 0;
+        StringCchLengthA(teststr, STRSAFE_MAX_CCH, &len);
+        len++;
+
+        for (int i = 0; i < cArraySize; i++, pCurStruct++)
+        {
+            pCurStruct->size = len;
+            buffer = (LPSTR)CoTaskMemAlloc(len);
+            StringCchCopyA(buffer, len, teststr);
+            pCurStruct->buffer = (char*)buffer;
+        }
+    }
+}

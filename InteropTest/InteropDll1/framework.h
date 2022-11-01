@@ -30,6 +30,39 @@ private:
 	int m_member;
 };
 
+//
+//  https://docs.microsoft.com/en-us/dotnet/framework/interop/marshaling-classes-structures-and-unions#structures-sample
+//  
+typedef struct PINVOKELIB_API _MYPERSON
+{
+	char* first;
+	char* last;
+} MYPERSON, * LP_MYPERSON;
+
+typedef struct PINVOKELIB_API _MYPERSON2
+{
+	MYPERSON* person;
+	int age;
+} MYPERSON2, * LP_MYPERSON2;
+
+typedef struct PINVOKELIB_API _MYPERSON3
+{
+	MYPERSON person;
+	int age;
+} MYPERSON3;
+
+typedef struct _MYSTRSTRUCT2
+{
+	char* buffer;
+	UINT size;
+} MYSTRSTRUCT2;
+
+typedef struct PINVOKELIB_API _MYARRAYSTRUCT
+{
+	bool flag;
+	int vals[3];
+} MYARRAYSTRUCT;
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -45,6 +78,15 @@ extern "C"
 	PINVOKELIB_API void DoSomethingOnTestClass(CTestClass* instance);
 	PINVOKELIB_API void DeleteTestClass(CTestClass* instance);
 
+
+	PINVOKELIB_API int TestStructInStruct(MYPERSON2* pPerson2);
+	PINVOKELIB_API void TestStructInStruct3(MYPERSON3 person3);
+	PINVOKELIB_API void TestArrayInStruct(MYARRAYSTRUCT* pStruct);
+
+	PINVOKELIB_API int TestRefArrayOfInts(int** ppArray, int* pSize);
+
+	PINVOKELIB_API void TestOutArrayOfStructs(int* pSize, MYSTRSTRUCT2** ppStruct);
+	
 #ifdef __cplusplus
 }
 #endif

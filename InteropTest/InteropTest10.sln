@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteropTest10", "InteropTes
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InteropDll1", "InteropDll1\InteropDll1.vcxproj", "{929D6FDB-75FA-452F-AF8C-A9C1F6A05648}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PInvokeDll2", "PInvokeDll2\PInvokeDll2.vcxproj", "{FCFF7BF3-834F-4BDC-B96D-2A9CF30C0B3E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +44,16 @@ Global
 		{929D6FDB-75FA-452F-AF8C-A9C1F6A05648}.Release|x64.Build.0 = Release|x64
 		{929D6FDB-75FA-452F-AF8C-A9C1F6A05648}.Release|x86.ActiveCfg = Release|Win32
 		{929D6FDB-75FA-452F-AF8C-A9C1F6A05648}.Release|x86.Build.0 = Release|Win32
+		{FCFF7BF3-834F-4BDC-B96D-2A9CF30C0B3E}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{FCFF7BF3-834F-4BDC-B96D-2A9CF30C0B3E}.Debug|x64.ActiveCfg = Debug|x64
+		{FCFF7BF3-834F-4BDC-B96D-2A9CF30C0B3E}.Debug|x64.Build.0 = Debug|x64
+		{FCFF7BF3-834F-4BDC-B96D-2A9CF30C0B3E}.Debug|x86.ActiveCfg = Debug|Win32
+		{FCFF7BF3-834F-4BDC-B96D-2A9CF30C0B3E}.Debug|x86.Build.0 = Debug|Win32
+		{FCFF7BF3-834F-4BDC-B96D-2A9CF30C0B3E}.Release|Any CPU.ActiveCfg = Release|Win32
+		{FCFF7BF3-834F-4BDC-B96D-2A9CF30C0B3E}.Release|x64.ActiveCfg = Release|x64
+		{FCFF7BF3-834F-4BDC-B96D-2A9CF30C0B3E}.Release|x64.Build.0 = Release|x64
+		{FCFF7BF3-834F-4BDC-B96D-2A9CF30C0B3E}.Release|x86.ActiveCfg = Release|Win32
+		{FCFF7BF3-834F-4BDC-B96D-2A9CF30C0B3E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
